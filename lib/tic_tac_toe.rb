@@ -46,13 +46,7 @@ class TicTacToe
   end
 
   def current_player
-    person = nil
-    if turn_count() % 2 == 0
-      person = "X"
-    else
-      person = "O"
-    end
-    person
+    turn_count.even? ? "X" : "O"
   end
 
   def turn
