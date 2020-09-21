@@ -66,7 +66,7 @@ class TicTacToe
       return combo
     end
   end
-end 
+end
 
   def full?
     @board.all?{|token| token == "X" || token == "O"}
@@ -87,13 +87,7 @@ end
   end
 
   def play
-    while !over?
-      turn
-    end
-    if won?
-      puts "Congratulations #{winner}!"
-    elsif draw?
-      puts "Cat's Game!"
-    end
+    turn until over?
+    puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
   end
 end
