@@ -32,7 +32,7 @@ class TicTacToe
 
   def position_taken?(index)
     @board[index] == "X" || @board[index] == "O"
-  end 
+  end
 
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
@@ -62,7 +62,7 @@ class TicTacToe
 
   def won?
     WIN_COMBINATIONS.any? do |combo|
-    if position_taken?(combo[0]) && @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]]
+      if position_taken?(combo[0]) && @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]]
       return combo
     end
   end
